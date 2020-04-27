@@ -1,6 +1,6 @@
 <?php
 
-namespace UserGeneratedContentBundle;
+namespace EzSystems\UserGeneratedContentBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

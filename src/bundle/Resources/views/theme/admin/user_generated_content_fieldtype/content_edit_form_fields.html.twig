@@ -1,0 +1,42 @@
+{% trans_default_domain 'user_generated_content' %}
+
+{% block ezplatform_fieldtype_ezugc_widget %}
+    <script type="text/template" class="ez-data-source__entry-template">
+        {{ form_row(form.fields.vars.prototype) }}
+    </script>
+    <div class="ez-table-header ground-base">
+        <div class="ez-table-header__headline">
+            {{ form_label(form) }}
+        </div>
+        <div>
+            <button 
+                type="button" 
+                class="btn btn-primary ez-btn--add-ugc-entry"
+                title="{{ 'ezugc.add'|trans|desc('Add') }}"
+            >
+                <svg class="ez-icon ez-icon-edit">
+                    <use xlink:href="{{ asset('bundles/ezplatformadminui/img/ez-icons.svg') }}#create"></use>
+                </svg>
+            </button>
+            <button 
+                type="button" 
+                class="btn btn-danger ez-btn--remove-ugc-entry"
+                title="{{ 'ezugc.remove'|trans|desc('Remove') }}"
+            >
+                <svg class="ez-icon ez-icon-edit">
+                    <use xlink:href="{{ asset('bundles/ezplatformadminui/img/ez-icons.svg') }}#trash"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+{% endblock %}
+
+{% block ezplatform_fieldtype_ezugc_entry_row %}
+    <h1>
+        block ezplatform_fieldtype_ezugc_entry_row
+    </h1>
+{% endblock %}
+
+{% block _ezrepoforms_content_edit_fieldsData_entry_value_entries_entry_cell_widget %}
+    {{ form_widget(form) }}
+{% endblock %}
